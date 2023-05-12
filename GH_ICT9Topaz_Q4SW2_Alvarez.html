@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minutes to Time</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-color: lightgoldenrodyellow;
+			margin: 100px;
+		}
+		div {
+			background-color: mintcream;
+			padding: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<h2><b>Minutes to Time</b></h2>
+	<p><b>CONVERT TIME</b></p>
+	<input type="text" id="id1" placeholder="Minutes to Seconds"><br>
+	<input type="submit" value="Compute" onclick="myFunction()"><br>
+		<p id="seconds"></p>	
+	<input type="text" id="id2" placeholder="Minutes to Hours"><br>
+	<input type="submit" value="Compute" onclick="myFunction2()"><br>
+		<p id="hours"></p>
+	<input type="text" id="id3" placeholder="Minutes to Days"><br>
+	<input type="submit" value="Compute" onclick="myFunction3()"><br>
+		<p id="days"></p>
+	<script>
+		function myFunction () {
+			var num1 = document.getElementById('id1').value;
+			var answer = num1 * 60;
+			document.getElementById('seconds').innerHTML = answer + " Seconds";
+		}
+
+		function myFunction2 () {
+			var num2 = document.getElementById('id2').value;
+			var answer = num2 / 60;
+			document.getElementById('minutes').innerHTML = answer + " Hours";
+		}
+
+		function myFunction3 () {
+			var num3 = document.getElementById('id3').value;
+			var answer = num3 / 1440;
+			document.getElementById('days').innerHTML = answer + " Days";
+		}
+	</script>
+</body>
+</html>
